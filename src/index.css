@@ -4,11 +4,15 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --page-width: 1440px;
   --animation-transition: .2s;
   --bg-color1: #f9f9f9;
-  --main-color: #688478
+  --main-color: #0969da;
+  --hover-color: #18559e;
+  --success-color: #30a14e;
+  --border-color: rgb(15 23 42 / 0.1);
 }
 
 * {
@@ -22,14 +26,24 @@
   border-radius: 8px;
   padding: 8px 14px;
   transition: var(--animation-transition);
+  border: none;
 
   &:hover {
-    background-color: #556760;
+    background-color: var(--hover-color);
   }
 }
 
 input {
   padding: 8px 14px;
   border-radius: 8px;
-  border: 1px solid rgb(15 23 42 / 0.1);
+  border: 1px solid var(--border-color);
+  accent-color: var(--main-color);
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
 }

@@ -4,10 +4,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
   --page-width: 1440px;
-  --animation-transition: .2s;
+  --animation-transition: 0.2s;
   --bg-color1: #f9f9f9;
   --main-color: #0969da;
   --hover-color: #18559e;
@@ -31,6 +30,10 @@
   &:hover {
     background-color: var(--hover-color);
   }
+
+  &:focus {
+    box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px var(--main-color), 0 1px 2px 0 black;
+  }
 }
 
 input {
@@ -38,6 +41,11 @@ input {
   border-radius: 8px;
   border: 1px solid var(--border-color);
   accent-color: var(--main-color);
+  outline: none;
+
+  &:focus {
+    box-shadow: 0 0 0 2px var(--main-color);
+  }
 }
 
 .input-container {

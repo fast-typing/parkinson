@@ -55,3 +55,7 @@ input {
   gap: 8px;
   width: fit-content;
 }
+
+.MuiPaper-root {
+  padding: 24px;
+}

@@ -50,7 +50,6 @@ export default function Header() {
               <button className="button" onClick={() => openModal("signup")}>
                 Регистрация
               </button>
-              <button className="button">Связаться</button>
             </div>
           </nav>
         </header>

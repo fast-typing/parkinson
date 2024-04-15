@@ -23,14 +23,14 @@ export default function AuthModal(props: Props) {
     setForm({ ...form, [name]: value });
   }
 
-  function submitForm() {
-
+  function submitForm(e) {
+    e.preventDefault()
   }
 
   return (
     <>
-      <div onClick={props.onClose} className="fixed top-0 bottom-0 left-0 right-0 bg-black/10 backdrop-blur-sm"></div>
-      <form className="fixed grid gap-4 bg-[var(--bg-color1)] top-1/2 left-1/2 p-8 translate-y-[-50%] translate-x-[-50%] rounded-lg w-[350px]">
+      <div onClick={props.onClose} className="z-[2] fixed top-0 bottom-0 left-0 right-0 bg-black/10 backdrop-blur-sm"></div>
+      <form onSubmit={submitForm} className="z-[3] fixed grid gap-4 bg-[var(--bg-color1)] top-1/2 left-1/2 p-8 translate-y-[-50%] translate-x-[-50%] rounded-lg w-[350px]">
         <h2 className="text-3xl font-medium">{label[props.type]}</h2>
         {props.type === "signin" ? (
           <div className="w-full">

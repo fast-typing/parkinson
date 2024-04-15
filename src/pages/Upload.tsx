@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const classes = "w-[200px] h-[200px] border-2	border-[var(--main-color)] border-dashed rounded-lg	flex items-center justify-center flex-col gap-4 ";
+const classes = "w-[200px] h-[200px] border-2	border-[var(--main-color)] border-dashed rounded-lg	flex items-center justify-center flex-col gap-4";
 
 interface Files {
   0: null | { isLoaded: boolean; data: any };

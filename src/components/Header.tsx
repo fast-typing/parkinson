@@ -43,6 +43,7 @@ export default function Header() {
             <Link to={"/ai"}>ИИ</Link>
             <Link to={"/samples"}>Образцы</Link>
             <Link to={"/upload"}>Загрузить</Link>
+            <Link to={"/more-info"}>Информация</Link>
             <div className="flex gap-4">
               <button className="button" onClick={() => openModal("signin")}>
                 Вход

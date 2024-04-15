@@ -41,6 +41,24 @@ export default function Upload() {
     setFiles({ ...newFiles });
   };
 
+  function getNameByIndex(index: number): string {
+    switch (index) {
+      case value:
+        
+        break;
+    
+      default:
+        break;
+    }
+//     Проба внимание, левая рука:
+// Файл не выбран
+// Проба внимание, правая рука:
+// Файл не выбран
+// Проба моторика, левая рука:
+// Файл не выбран
+// Проба моторика, правая рука:
+  }
+
   return (
     <form className="grid gap-4 w-fit">
       <div className="grid-cols-2 grid gap-4">

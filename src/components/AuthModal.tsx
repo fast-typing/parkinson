@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { login, registration } from "../api/api.ts";
 
 interface Props {
   type: "signin" | "signup";
@@ -23,8 +24,15 @@ export default function AuthModal(props: Props) {
     setForm({ ...form, [name]: value });
   }
 
-  function submitForm(e) {
-    e.preventDefault()
+  function submitForm() {
+    const values: any = form
+    if (props.type == 'signin') {
+      delete values.username
+      registration(values)
+    } else {
+      delete values.email
+      login(values)
+    }
   }
 
   return (
